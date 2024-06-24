@@ -11,6 +11,7 @@ type Props = {
   disabled?: boolean; // Links cannot be disabled
   target?: "_blank" | "_parent" | "_self" | "_top";
   href?: string;
+  ariaLabel?: string;
 };
 
 const {
@@ -19,6 +20,7 @@ const {
   disabled = false,
   href = "",
   target,
+  ariaLabel,
 } = Astro.props;
 
 const hasPrefixSlot = Astro.slots.has("prefix");
@@ -58,6 +60,7 @@ const isIconOnly = (hasPrefixSlot || hasSuffixSlot) && !hasDefaultSlot;
         isIconOnly && size === "2xl" && "p-4",
       ]}
       disabled={disabled}
+      aria-label={ariaLabel}
     >
       <span
         class:list={[
@@ -107,6 +110,7 @@ const isIconOnly = (hasPrefixSlot || hasSuffixSlot) && !hasDefaultSlot;
       ]}
       target={target ?? undefined}
       rel={target && "noreferrer noopener"}
+      aria-label={ariaLabel}
     >
       <span
         class:list={[
