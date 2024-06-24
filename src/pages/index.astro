@@ -1,0 +1,116 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Button from "@/components/Button.astro";
+import Star from "@/icons/Star.astro";
+
+import "@/styles/base.css";
+---
+
+<Layout title="Buttons">
+  <main class="flex min-h-dvh justify-center bg-primary pt-[200px]">
+    <div class="flex flex-col gap-12">
+      <div class="flex items-center gap-5">
+        <Button variant="primary" size="md">Button CTA</Button>
+        <Button variant="primary" size="lg">
+          <Star slot="prefix" />
+          Button CTA
+        </Button>
+        <Button variant="primary" size="xl">
+          Button CTA
+          <Star slot="suffix" />
+        </Button>
+        <Button variant="primary" size="2xl">Button CTA</Button>
+        <Button variant="primary" size="2xl">
+          <Star slot="suffix" />
+        </Button>
+      </div>
+      <div class="flex items-center gap-5">
+        <Button variant="secondary" size="md">Button CTA</Button>
+        <Button variant="secondary" size="lg">
+          <Star slot="prefix" />
+          Button CTA
+        </Button>
+        <Button variant="secondary" size="xl">
+          Button CTA
+          <Star slot="suffix" />
+        </Button>
+        <Button variant="secondary" size="2xl">Button CTA</Button>
+        <Button variant="secondary" size="2xl">
+          <Star slot="suffix" />
+        </Button>
+      </div>
+      <div class="flex items-center gap-5">
+        <Button variant="tertiary" size="md">Button CTA</Button>
+        <Button variant="tertiary" size="lg">
+          <Star slot="prefix" />
+          Button CTA
+        </Button>
+        <Button variant="tertiary" size="xl">
+          Button CTA
+          <Star slot="suffix" />
+        </Button>
+        <Button variant="tertiary" size="2xl">Button CTA</Button>
+        <Button variant="tertiary" size="2xl">
+          <Star slot="suffix" />
+        </Button>
+      </div>
+      <div class="flex items-center gap-5">
+        <Button variant="link-color" href="#" size="md">Button CTA</Button>
+        <Button variant="link-color" href="#" size="lg">
+          <Star slot="prefix" />
+          Button CTA
+        </Button>
+        <Button variant="link-color" href="#" size="xl">
+          Button CTA
+          <Star slot="suffix" />
+        </Button>
+        <Button variant="link-color" href="#" size="2xl">Button CTA</Button>
+        <Button variant="link-color" href="#" size="2xl">
+          <Star slot="suffix" />
+        </Button>
+      </div>
+      <div class="flex items-center gap-5">
+        <Button variant="link-gray" href="#" size="md" target="_blank">
+          Button CTA
+        </Button>
+        <Button variant="link-gray" href="#" size="lg">
+          <Star slot="prefix" />
+          Button CTA
+        </Button>
+        <Button variant="link-gray" href="#" size="xl">
+          Button CTA
+          <Star slot="suffix" />
+        </Button>
+        <Button variant="link-gray" href="#" size="2xl">Button CTA</Button>
+        <Button variant="link-gray" href="#" size="2xl">
+          <Star slot="suffix" />
+        </Button>
+      </div>
+      <div class="flex items-center gap-5">
+        <Button variant="destructive" size="md">Button CTA</Button>
+        <Button variant="destructive" size="lg">
+          <Star slot="prefix" />
+          Button CTA
+        </Button>
+        <Button variant="destructive" size="xl">
+          Button CTA
+          <Star slot="suffix" />
+        </Button>
+        <Button variant="destructive" size="2xl">Button CTA</Button>
+        <Button variant="destructive" size="2xl">
+          <Star slot="suffix" />
+        </Button>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .linear-bg {
+    --Linear-Page: linear-gradient(148deg, #f9fafb 8.89%, #d2d6db 100.48%);
+    background: var(
+      --Linear-Page,
+      linear-gradient(148deg, #f9fafb 8.89%, #d2d6db 100.48%)
+    );
+  }
+</style>
